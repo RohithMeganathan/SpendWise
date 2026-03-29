@@ -5,15 +5,15 @@ namespace IncomeExpenseManagementApp.Services
     public interface ICategoryService
     {
         Task<IEnumerable<CategoryDTO>> GetAllCategoriesAsync();
-        Task<IEnumerable<CategoryDTO>> GetCategoriesByTypeAsync(byte transactionTypeId);
-        Task<CategoryDTO?> GetCategoryByIdAsync(byte id);
+        Task<IEnumerable<CategoryDTO>> GetCategoriesByTypeAsync(short transactionTypeId);
+        Task<CategoryDTO?> GetCategoryByIdAsync(short id);
         Task<CategoryDTO> CreateCategoryAsync(CreateCategoryDTO createCategoryDTO);
-        Task<bool> DeleteCategoryAsync(byte id);
+        Task<bool> DeleteCategoryAsync(short id);
     }
 
     public interface ITransactionService
     {
-        Task<IEnumerable<TransactionDTO>> GetAllTransactionsAsync(byte? categoryId = null, DateTime? startDate = null, DateTime? endDate = null);
+        Task<IEnumerable<TransactionDTO>> GetAllTransactionsAsync(short? categoryId = null, DateTime? startDate = null, DateTime? endDate = null);
         Task<TransactionDTO?> GetTransactionByIdAsync(long id);
         Task<TransactionDTO> CreateTransactionAsync(CreateTransactionDTO createTransactionDTO);
         Task<TransactionDTO?> UpdateTransactionAsync(long id, UpdateTransactionDTO updateTransactionDTO);

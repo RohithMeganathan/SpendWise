@@ -27,7 +27,7 @@ namespace IncomeExpenseManagementApp.Data
             // Configure Transaction table
             modelBuilder.Entity<Transaction>()
                 .Property(t => t.TransactionDate)
-                .HasDefaultValueSql("GETUTCDATE()");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
             // Configure relationships
             modelBuilder.Entity<Category>()

@@ -22,7 +22,7 @@ namespace IncomeExpenseManagementApp.Controllers
         /// </summary>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TransactionDTO>>> GetTransactions(
-            [FromQuery] byte? categoryId = null,
+            [FromQuery] short? categoryId = null,
             [FromQuery] DateTime? startDate = null,
             [FromQuery] DateTime? endDate = null)
         {

@@ -39,7 +39,7 @@ namespace IncomeExpenseManagementApp.Controllers
         /// Get categories by transaction type
         /// </summary>
         [HttpGet("by-type/{transactionTypeId}")]
-        public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetCategoriesByType(byte transactionTypeId)
+        public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetCategoriesByType(short transactionTypeId)
         {
             try
             {

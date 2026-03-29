@@ -5,7 +5,7 @@ namespace IncomeExpenseManagementApp.Models
     public class TransactionType
     {
         [Key]
-        public byte Id { get; set; }
+        public short Id { get; set; }
 
         [Required]
         [StringLength(10)]

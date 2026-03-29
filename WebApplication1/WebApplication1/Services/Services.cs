@@ -34,7 +34,7 @@ namespace IncomeExpenseManagementApp.Services
             }
         }
 
-        public async Task<IEnumerable<CategoryDTO>> GetCategoriesByTypeAsync(byte transactionTypeId)
+        public async Task<IEnumerable<CategoryDTO>> GetCategoriesByTypeAsync(short transactionTypeId)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace IncomeExpenseManagementApp.Services
             }
         }
 
-        public async Task<CategoryDTO?> GetCategoryByIdAsync(byte id)
+        public async Task<CategoryDTO?> GetCategoryByIdAsync(short id)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace IncomeExpenseManagementApp.Services
             }
         }
 
-        public async Task<bool> DeleteCategoryAsync(byte id)
+        public async Task<bool> DeleteCategoryAsync(short id)
         {
             try
             {
@@ -143,7 +143,7 @@ namespace IncomeExpenseManagementApp.Services
         }
 
         public async Task<IEnumerable<TransactionDTO>> GetAllTransactionsAsync(
-            byte? categoryId = null,
+            short? categoryId = null,
             DateTime? startDate = null,
             DateTime? endDate = null)
         {

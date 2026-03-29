@@ -18,7 +18,7 @@ namespace IncomeExpenseManagementApp.Repositories
     {
         public CategoryRepository(ApplicationDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<Category>> GetByTransactionTypeAsync(byte transactionTypeId)
+        public async Task<IEnumerable<Category>> GetByTransactionTypeAsync(short transactionTypeId)
         {
             return await _dbSet
                 .Where(c => c.TransactionTypeId == transactionTypeId)
@@ -26,7 +26,7 @@ namespace IncomeExpenseManagementApp.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Category?> GetWithTransactionTypeAsync(byte id)
+        public async Task<Category?> GetWithTransactionTypeAsync(short id)
         {
             return await _dbSet
                 .Include(c => c.TransactionType)
@@ -57,7 +57,7 @@ namespace IncomeExpenseManagementApp.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Transaction>> GetByCategoryAsync(byte categoryId)
+        public async Task<IEnumerable<Transaction>> GetByCategoryAsync(short categoryId)
         {
             return await _dbSet
                 .Include(t => t.Category)
@@ -67,7 +67,7 @@ namespace IncomeExpenseManagementApp.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Transaction?> GetWithCategoryByCategoryAsync(byte categoryId)
+        public async Task<Transaction?> GetWithCategoryByCategoryAsync(short categoryId)
         {
             return await _dbSet
                 .Include(t => t.Category)

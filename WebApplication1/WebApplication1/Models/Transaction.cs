@@ -16,7 +16,7 @@ namespace IncomeExpenseManagementApp.Models
         public string? Description { get; set; }
 
         [ForeignKey("Category")]
-        public byte CategoryId { get; set; }
+        public short CategoryId { get; set; }
 
         [Column(TypeName = "decimal(10,2)")]
         public decimal Amount { get; set; }

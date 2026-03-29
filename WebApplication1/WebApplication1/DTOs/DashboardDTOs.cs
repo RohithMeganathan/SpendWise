@@ -16,7 +16,7 @@ namespace IncomeExpenseManagementApp.DTOs
 
     public class CategorySummaryDTO
     {
-        public byte CategoryId { get; set; }
+        public short CategoryId { get; set; }
         public string CategoryName { get; set; } = string.Empty;
         public decimal Total { get; set; }
         public int Count { get; set; }

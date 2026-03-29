@@ -6,14 +6,14 @@ namespace IncomeExpenseManagementApp.Models
     public class Category
     {
         [Key]
-        public byte Id { get; set; }
+        public short Id { get; set; }
 
         [Required]
         [StringLength(50)]
         public string Name { get; set; } = string.Empty;
 
         [ForeignKey("TransactionType")]
-        public byte TransactionTypeId { get; set; }
+        public short TransactionTypeId { get; set; }
 
         // Navigation properties
         public TransactionType? TransactionType { get; set; }
