@@ -45,6 +45,7 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+app.MapGet("/", () => "SpendWise API is running");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
