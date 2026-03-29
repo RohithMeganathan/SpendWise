@@ -18,6 +18,11 @@ namespace IncomeExpenseManagementApp.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Map table names to lowercase (PostgreSQL case-sensitivity)
+            modelBuilder.Entity<Transaction>().ToTable("transactions");
+            modelBuilder.Entity<Category>().ToTable("category");
+            modelBuilder.Entity<TransactionType>().ToTable("transactiontype");
+
             // Seed initial transaction types
             modelBuilder.Entity<TransactionType>().HasData(
                 new TransactionType { Id = 1, Name = "Income" },
